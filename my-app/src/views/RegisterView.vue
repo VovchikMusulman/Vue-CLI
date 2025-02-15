@@ -1,4 +1,5 @@
 <template>
+  <person-display></person-display>
   <div class="auth-container">
     <h2>Регистрация</h2>
     <form @submit.prevent="handleRegister" class="auth-form">
@@ -24,7 +25,11 @@
 </template>
 
 <script>
+import PersonDisplay from './PersonDisplay.vue'
 export default {
+  components: {
+    PersonDisplay
+  },
   data() {
     return {
       email: '',
